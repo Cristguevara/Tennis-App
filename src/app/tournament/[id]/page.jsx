@@ -7,7 +7,7 @@ import PlayerList from "@/components/playerList";
 import Alert from "@/components/Alert";
 import LoadingAnimation from '@/components/loading'
 
-export default function detailsTournament(){
+export default function DetailsTournament(){
 
     const [infTourn, setInfTourn] = useState({
         name: "",
