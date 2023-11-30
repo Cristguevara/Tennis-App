@@ -9,11 +9,11 @@ export async function GET(){
         connectDB()
 
         const headersList = headers();
-        const token = headersList.get("token");
-        console.log(token)
+        //const token = headersList.get("token");
+        //console.log(token)
         return NextResponse.json({
             ok:false,
-            tokenHeader:token
+            tokenHeader:headersList
         })
         
         if(!token){
