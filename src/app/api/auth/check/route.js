@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { headers } from "next/headers";
+//import { headers } from "next/headers";
 import jwt from "jsonwebtoken";
 import generarJWT from "@/utils/generateJWT";
 import User from "@/models/users";
 import { connectDB } from "@/utils/mongoose";
 
-export async function POST(){
+export async function POST(req){
     try{
         connectDB()
         const body = await req.json()
