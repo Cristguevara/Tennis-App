@@ -11,7 +11,7 @@ export async function GET(){
 
         const headersList = headers();
         const token = headersList.get("token");
-        //console.log(token)
+        console.log(token)
         
         if(!token){
             return NextResponse.json({
@@ -20,7 +20,6 @@ export async function GET(){
         }
 
         const { uid, email, isAdmin } = jwt.verify( token, process.env.SECRET_JWT_SEED );
-
         const newToken = await generarJWT(uid,email,isAdmin)
 
         const userFind = await User.findOne({ email });
@@ -42,7 +41,7 @@ export async function GET(){
         return NextResponse.json({
             ok:false,
             msg: 'Token no válido',
-            token: token,
+            err: err,
             //secret : process.env.SECRET_JWT_SEED
         })
     }
