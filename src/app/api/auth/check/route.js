@@ -41,7 +41,9 @@ export async function GET(){
         console.log('Error: ',err)
         return NextResponse.json({
             ok:false,
-            msg: 'Token no válido'
+            msg: 'Token no válido',
+            token: token,
+            secret : process.env.SECRET_JWT_SEED
         })
     }
     
