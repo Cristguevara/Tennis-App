@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 import generarJWT from "@/utils/generateJWT";
 import User from "@/models/users";
 import { connectDB } from "@/utils/mongoose";
-export const dynamic = 'force-static'
 export async function GET(){
     try{
         connectDB()
@@ -12,6 +11,10 @@ export async function GET(){
         const headersList = headers();
         const token = headersList.get("token");
         console.log(token)
+        return NextResponse.json({
+            ok:false,
+            tokenHeader:token
+        })
         
         if(!token){
             return NextResponse.json({
