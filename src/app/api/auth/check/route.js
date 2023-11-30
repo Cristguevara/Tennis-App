@@ -43,7 +43,7 @@ export async function GET(){
             ok:false,
             msg: 'Token no válido',
             token: token,
-            secret : process.env.SECRET_JWT_SEED
+            //secret : process.env.SECRET_JWT_SEED
         })
     }
     
