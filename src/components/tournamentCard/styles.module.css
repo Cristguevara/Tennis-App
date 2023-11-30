@@ -1,0 +1,37 @@
+.btnGo {
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #F47920;
+    transition: all 1000ms;
+    font-size: 16px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #F47920;
+  }
+  
+  .btnGo:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #F47920;
+    box-shadow: 4px 5px 17px -4px black;
+  }
+  
+  .btnGo::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #F47920;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .btnGo:hover::before {
+    width: 250%;
+  }

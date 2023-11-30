@@ -1,0 +1,22 @@
+.rotateBubbles{
+    animation-duration: 10s;
+    animation-name: bubbles;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes bubbles {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(45deg)
+    }
+  }
+  
+  .rotateBubbles2{
+    animation-duration: 10s;
+    animation-name: bubbles;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+  }

@@ -1,0 +1,26 @@
+import jwt from "jsonwebtoken";
+
+export default async function generarJWT ( uid, email,isAdmin ) {
+
+    const payload = { uid, email, isAdmin };
+    
+    return new Promise( (resolve, reject) => {
+
+        jwt.sign( payload, process.env.SECRET_JWT_SEED, {
+            expiresIn: '24h'
+        }, (err, token) => {
+    
+            if ( err ) {
+                // TODO MAL
+                console.log(err);
+                reject(err);
+    
+            } else {
+                // TODO BIEN
+                resolve( token )
+            }
+    
+        })
+    });
+}
+

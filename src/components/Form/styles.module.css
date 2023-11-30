@@ -1,0 +1,11 @@
+.form {
+    width: fit-content;
+    padding: 2rem;
+    border: .5px solid #878787;
+    border-radius: 10px;
+    min-width: 450px;
+}
+
+.descriptionContainer {
+    text-align: center;
+}
