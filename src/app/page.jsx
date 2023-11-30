@@ -1,5 +1,5 @@
 'use client'
-
+export const dynamic = "force-dynamic"
 import { Form } from '@/components/Form'
 import { useLoading } from '@/hooks/useLoading'
 import { useRouter } from 'next/navigation'

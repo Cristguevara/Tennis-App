@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+
 export async function  valdateToken () {
 
     const token = localStorage.getItem('x-token')
