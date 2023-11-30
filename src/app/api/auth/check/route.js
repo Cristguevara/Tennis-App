@@ -5,13 +5,14 @@ import generarJWT from "@/utils/generateJWT";
 import User from "@/models/users";
 import { connectDB } from "@/utils/mongoose";
 
-export async function GET(){
+export async function POST(){
     try{
         connectDB()
-
-        const headersList = headers();
-        const token = headersList.get("token");
-        console.log(token)
+        const body = await req.json()
+        const { token } = body
+        //const headersList = headers();
+        //const token = headersList.get("token");
+        //console.log(token)
         
         if(!token){
             return NextResponse.json({

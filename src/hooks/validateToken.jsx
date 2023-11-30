@@ -7,14 +7,15 @@ export async function  valdateToken () {
         return {ok:false}
     }
     const data = await fetch('/api/auth/check', {
-      headers: {
+      method: 'POST',
+      body: JSON.stringify({
         token: token
-      }
+      })
     })
 
     const res = await data.json();
     console.log('resValidate: ',res)
-    await localStorage.setItem('x-token', res.newToken)
+    localStorage.setItem('x-token', res.newToken)
     return res
 }
 
