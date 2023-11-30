@@ -13,7 +13,8 @@ export async function  valdateToken () {
     })
 
     const res = await data.json();
-    localStorage.setItem('x-token', res.newToken)
+    console.log('resValidate: ',res)
+    await localStorage.setItem('x-token', res.newToken)
     return res
 }
 
